@@ -3,7 +3,7 @@
 $servername = "localhost";
 $database = "user_info";
 $username = "root";
-$password = " ";
+$password = "";
 
 // Create connection
 
@@ -42,50 +42,49 @@ mysqli_close($conn);
     <title>Home</title>
 </head>
 <body>
-<form method="post">
-    <div class="container mt-5">
-        <h1>Record System </h1>
-        <hr>
-        <br>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                <tr>
-                    <td><?php echo $row['username']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><a href="edit_user.php?edit=<?php echo $row['id']; ?>  class=" delbutton" ><i
-                                class="fa fa-pencil-square-o"
-                                aria-hidden="true"
-                                style="font-size: 25px ;margin-right: 20%"></i></a>
-                    </td>
 
-                    <td>
-                        <button id="<?php echo $row['id']; ?>" class="delbutton btn btn-danger"><i class="fa fa-trash"
-                                                                                                   aria-hidden="true"
-                                                                                                   style="font-size: 25px ;margin-right: 20%"></i>
-                        </button>
-                    </td>
-
-
-                </tr>
-                <?php
-            }
+<div class="container mt-5">
+    <h1>Record System </h1>
+    <hr>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        while ($row = mysqli_fetch_assoc($result)) {
             ?>
-            </tbody>
-        </table>
+            <tr>
+                <td><?php echo $row['username']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td>
+                <td><a href="edit.php?edit=<?php echo $row['id'] ;  ?>">Edit</a></td>
+                </td>
 
-    </div>
-</form>
+                <td>
+                    <button id="<?php echo $row['id']; ?>" class="delbutton btn btn-danger"><i class="fa fa-trash"
+                                                                                               aria-hidden="true"
+                                                                                               style="font-size: 25px ;margin-right: 20%"></i>
+                    </button>
+                </td>
+
+
+            </tr>
+            <?php
+        }
+        ?>
+        </tbody>
+    </table>
+
+</div>
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -93,45 +92,75 @@ mysqli_close($conn);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script type="text/javascript">
 
-    $(document).ready(function () {
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": true,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
+ $(document).ready(function () {
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
 
-        $(function () {
+    $(function () {
 
-            $(".delbutton").click(function () {
-                var del_id = $(this).attr("id");
-                var info = 'id=' + del_id;
+        $(".delbutton").click(function () {
+            var del_id = $(this).attr("id");
+            var info = 'id=' + del_id;
 
 
-                $.ajax({
-                    type: "POST",
-                    url: "delete_entry.php", //URL to the delete php script
-                    data: info,
-                    success: function () {
-                        toastr["success"]("Record Have Been Deleted Successfully", "Delete!")
-                    }
-                });
-                $(this).closest("tr").remove();
-                return false;
+            $.ajax({
+                type: "POST",
+                url: "delete_entry.php", //URL to the delete php script
+                data: info,
+                success: function () {
+                    toastr["success"]("Record Have Been Deleted Successfully", "Delete!")
+                }
             });
+            $(this).closest("tr").remove();
+            return false;
         });
-    })
+    });
+
+
+    // Edit Record
+
+     $(function () {
+
+         $(".editbutton").click(function () {
+             var edit_id = $(this).attr("id");
+             var info = 'id=' + edit_id;
+             console.log(info);
+
+
+         });
+
+
+
+
+
+     });
+
+
+
+
+
+
+
+
+
+
+
+ })
 </script>
 
 </body>

@@ -1,9 +1,10 @@
 <?php
-$_POST['username'];
+
 $servername = "localhost";
 $database = "user_info";
 $username = "root";
-$password = " ";
+$password = "";
+
 
 // Create connection
 

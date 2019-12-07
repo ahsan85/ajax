@@ -2,78 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ajax</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
-    </link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Home</title>
 </head>
 <body>
 
-<div class="container mt-5 col-lg-4 ">
+<div class="container mt-5 col-lg-2 border">
+    <div class="">
+        <header class="" style="font-size: 40px">Dashboard</header>
+        <hr>
+        <div>
 
-    <form method="post" action="" id="myForm" class="form">
-        <header class="card mb-4 bg-dark">
-            <h3 style="text-align: center; color: whitesmoke">Insert Data </h3>
-        </header>
-        <div class="form-group">
-            <input type="text" name="username" class="form-control" placeholder="Enter username here">
+          <i class="fa fa-trash" aria-hidden="true" style="font-size: 65px ;margin-right: 20%" ></i>
+            <a href="insert.php"> <i class="fa fa-plus-circle " aria-hidden="true" style="font-size: 65px;float: right "></i> </a>
+            <br><br>
+            <br>
+
         </div>
+        <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size: 65px ;margin-right: 20%"></i>
+        <a href="view.php"> <i class="fa fa-eye" aria-hidden="true" style="font-size: 65px;float: right "></i></a>
+        <div>
 
-        <div class="form-group">
-            <input type="text" name="email" class="form-control" placeholder="Enter your email here">
+
         </div>
-        <button type="submit" class="btn btn-primary float-right form-control" name="submit">Save record</button>
-    </form>
-
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": true,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
-
-        $('#myForm').submit(function (e) {
-            //  console.log("submitted");
-            $.ajax({
-                type: 'POST',
-                url: 'submit.php',
-                data: $('#myForm').serialize(),
-                success: function (data) {
-                    if (data==0){
-                        toastr["success"]("Record Have Been Saved Successfully", "Success!")
-                    }
-                    else {
-                        toastr["error"]("Please Fill All Fields", "Error!");
-                    }
-                }
-
-            })
-            var form = document.getElementById('myForm').reset();
-            return false;
-            //  e.preventDefault();
-        })
-
-    })
-</script>
 </body>
 </html>
-
-
