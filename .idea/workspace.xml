@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="623e7eb3-cdc2-4e5c-9eac-7ca18b43a8ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/save_updated_data.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete_entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete_entry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save_updated_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/save_updated_data.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +17,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,7 +53,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myproject" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,7 +97,17 @@
       <workItem from="1575383516907" duration="2856000" />
       <workItem from="1575479223563" duration="89000" />
       <workItem from="1575574136425" duration="688000" />
-      <workItem from="1575706202152" duration="3089000" />
+      <workItem from="1575706202152" duration="3681000" />
+      <workItem from="1575714530367" duration="20000" />
+      <workItem from="1575821702023" duration="8378000" />
+      <workItem from="1575901783077" duration="7713000" />
+      <workItem from="1575917340589" duration="29000" />
+      <workItem from="1575989989145" duration="551000" />
+      <workItem from="1575990561986" duration="10365000" />
+      <workItem from="1576035314479" duration="831000" />
+      <workItem from="1576037557055" duration="2668000" />
+      <workItem from="1576077693076" duration="3539000" />
+      <workItem from="1576086115347" duration="23000" />
     </task>
     <servers />
   </component>
@@ -94,10 +115,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1575479309900">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1576086132575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1575479309900" />
+    <state x="1908" y="139" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1600.860@1366.0.1600.860" timestamp="1575714543111" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576086132575" />
     <state x="518" y="286" key="NewPhpFileDialog" timestamp="1575304374801">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -106,10 +128,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1574785090692" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1575706210646">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1576086117578">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1575706210646" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576086117578" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1575298193061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

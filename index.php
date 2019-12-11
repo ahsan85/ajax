@@ -19,15 +19,14 @@
         <hr>
         <div>
 
-          <i class="fa fa-trash" aria-hidden="true" style="font-size: 65px ;margin-right: 20%" ></i>
-            <a href="insert.php"> <i class="fa fa-plus-circle " aria-hidden="true" style="font-size: 65px;float: right "></i> </a>
+
+            <a href="insert.php"> <i class="fa fa-plus-circle " aria-hidden="true"
+                                     style="font-size: 65px;float: right "></i> </a>
+            <a href="view.php"> <i class="fa fa-eye" aria-hidden="true" style="font-size: 65px;float: left "></i></a>
             <br><br>
             <br>
 
-        </div>
-        <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size: 65px ;margin-right: 20%"></i>
-        <a href="view.php"> <i class="fa fa-eye" aria-hidden="true" style="font-size: 65px;float: right "></i></a>
-        <div>
+
 
 
         </div>
